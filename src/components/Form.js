@@ -7,24 +7,18 @@ import Swal from 'sweetalert2';
 
 const Form = () => {
 
-    const { jugadorUno, setJugadorUno, jugadorDos, setJugadorDos} = useJugadores();
+    const { jugadorUno, handleJugadorUnoChange, handleJugadorDosChange, jugadorDos, partidaIniciada, setPartidaIniciada} = useJugadores();
 
     let navigate = useNavigate();
-
-    const handleJugadorUnoChange = ({ target }) => {
-        setJugadorUno(target.value);
-    };
-    const handleJugadorDosChange = ({ target }) => {
-        setJugadorDos(target.value);
-    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
         if (jugadorUno !== "" && jugadorDos !== "") {
+            if(!partidaIniciada){
+                setPartidaIniciada(true);
+            }
             routeChange();
-            console.log(jugadorUno);
-            console.log(jugadorDos);
         } else {
             Swal.fire({
                 icon: 'error',

@@ -32,7 +32,7 @@ const JugadoresProvider = ({ children }) => {
   useEffect(() => {
     const consultarAPI = async () => {
       if (partidaIniciada) {
-        const url = `http://deckofcardsapi.com/api/deck/new/`;
+        const url = `https://deckofcardsapi.com/api/deck/new/`;
         const { data } = await axios(url);
         setPartida(data);
       }

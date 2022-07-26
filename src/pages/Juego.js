@@ -27,7 +27,7 @@ const Juego = () => {
 
     const consultarCartasAPI = async () => {
         if (partida.deck_id !== undefined && partidaIniciada) {
-            const url = `http://deckofcardsapi.com/api/deck/${partida.deck_id}/draw/?count=2 `;
+            const url = `https://deckofcardsapi.com/api/deck/${partida.deck_id}/draw/?count=2 `;
             const { data } = await axios(url);
             setCartasJugadorDos([...cartasJugadorDos, data.cards[Math.floor(Math.random() * 2)]]);
             setCartasJugadorUno([...cartasJugadorUno, data.cards[Math.floor(Math.random() * 2)]]);

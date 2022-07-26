@@ -137,26 +137,26 @@ const JugadoresProvider = ({ children }) => {
         if (puntajeJugadorUno > puntajeJugadorDos) {
           setGanadorJugadorUno(duplicadosJugadorUno);
           setGanadorJugadorDos(duplicadosJugadorDos);
-          setTimeout(() => { mensajeGanadorPuntaje(jugadorUno, puntajeJugadorUno) }, 3000);
+          setTimeout(() => { mensajeGanadorPuntaje(jugadorUno, puntajeJugadorUno) }, 1000);
         } else if (puntajeJugadorDos > puntajeJugadorUno) {
           setGanadorJugadorUno(duplicadosJugadorUno);
           setGanadorJugadorDos(duplicadosJugadorDos);
-          setTimeout(() => { mensajeGanadorPuntaje(jugadorUno, puntajeJugadorDos) }, 3000);
+          setTimeout(() => { mensajeGanadorPuntaje(jugadorUno, puntajeJugadorDos) }, 1000);
         } else if (puntajeJugadorUno === puntajeJugadorDos) {
           setGanadorJugadorUno(duplicadosJugadorUno);
           setGanadorJugadorDos(duplicadosJugadorDos);
-          setTimeout(() => { mensajeEmpateTotal() }, 5000);
+          setTimeout(() => { mensajeEmpateTotal() }, 1000);
         }
 
 
       } else if (duplicadosJugadorUno.length === 2) {
         setGanadorJugadorUno(duplicadosJugadorUno);
-        setTimeout(() => { mensajeGanador(jugadorUno) }, 3000);
+        setTimeout(() => { mensajeGanador(jugadorUno) }, 1000);
 
 
       } else if (duplicadosJugadorDos.length === 2) {
         setGanadorJugadorDos(duplicadosJugadorDos);
-        setTimeout(() => { mensajeGanador(jugadorDos) }, 3000);
+        setTimeout(() => { mensajeGanador(jugadorDos) }, 1000);
       }
     }
   }, [cartasJugadorUno, cartasJugadorDos, jugadorUno, jugadorDos, navigate]);
